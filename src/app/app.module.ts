@@ -12,7 +12,10 @@ import { LoginPage} from '../pages/login/login';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FingerprintAIO } from '@ionic-native/fingerprint-aio';
+import { AppAvailability } from '@ionic-native/app-availability';
 import { TouchProvider } from '../providers/touch';
+import { UtilityService } from '../providers/utility';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +44,9 @@ import { TouchProvider } from '../providers/touch';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     FingerprintAIO,
-    TouchProvider
+    AppAvailability,
+    TouchProvider,
+    UtilityService
   ]
 })
 export class AppModule {}
