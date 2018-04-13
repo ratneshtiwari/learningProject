@@ -13,6 +13,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FingerprintAIO } from '@ionic-native/fingerprint-aio';
 import { AppAvailability } from '@ionic-native/app-availability';
+import { NavController } from 'ionic-angular';
 import { TouchProvider } from '../providers/touch';
 import { UtilityService } from '../providers/utility';
 
@@ -46,7 +47,8 @@ import { UtilityService } from '../providers/utility';
     FingerprintAIO,
     AppAvailability,
     TouchProvider,
-    UtilityService
+    UtilityService,
+    
   ]
 })
 export class AppModule {}

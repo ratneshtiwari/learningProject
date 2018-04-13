@@ -15,6 +15,7 @@ export class TouchProvider {
     console.log('Hello TouchProvider Provider');
   }
   verifyFinger() {
+    return new Promise((resolve, reject) =>{
     this.faio.show({
       clientId: 'Fingerprint-Demo',
       clientSecret: 'password', //Only necessary for Android
@@ -22,7 +23,8 @@ export class TouchProvider {
       localizedFallbackTitle: 'Use Pin', //Only for iOS
       localizedReason: 'Please authenticate' //Only for iOS
     })
-      .then((result: any) => console.log(result))
+      .then((result: any) => resolve(true))
       .catch((error: any) => console.log(error));
-  }
+  });
+}
 }

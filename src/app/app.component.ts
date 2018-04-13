@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage} from '../pages/login/login';
 import { TouchProvider } from '../providers/touch';
 import { HomePage } from '../pages/home/home';
+
 @Component({
   templateUrl: 'app.html'
 })
+
 export class MyApp {
-  rootPage:any = HomePage;
+   public rootPage: any = LoginPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private Touch:TouchProvider) {
     platform.ready().then(() => {
@@ -18,6 +20,10 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
-    this.Touch.verifyFinger();
+    this.Touch.verifyFinger().then((res) => {
+      if(res){
+        this.rootPage = HomePage;
+      }
+    });
   }
 }
