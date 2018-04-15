@@ -8,6 +8,8 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage} from '../pages/login/login';
+import { Header } from '../pages/common/header/common-header';
+import { Footer } from '../pages/common/footer/common-footer';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,7 +27,9 @@ import { UtilityService } from '../providers/utility';
     ContactPage,
     HomePage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    Header,
+    Footer
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,9 @@ import { UtilityService } from '../providers/utility';
     ContactPage,
     HomePage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    Header,
+    Footer
   ],
   providers: [
     StatusBar,

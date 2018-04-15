@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <page-header [HeaderConfig]="headerConfigObj"></page-header>
   </ion-navbar>
 </ion-header>
 
@@ -15,3 +15,8 @@
     update any existing page or create new pages.
   </p>
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <page-footer></page-footer>
+  </ion-toolbar>
+</ion-footer>

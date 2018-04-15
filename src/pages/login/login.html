@@ -1,34 +1,29 @@
-<ion-content padding id="welcome">
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <h1>Welcome to Your App</h1>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
-  <!-- <ion-grid >
-    <ion-row>
-      <ion-col center text-center>
-        <button ion-button full color="success" (click)="signup()">Sign up</button>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col center text-center>
-        <button ion-button full color="lightText" (click)="login()">Log in</button>
-      </ion-col>
-    </ion-row>
-  </ion-grid> -->
-  <ion-grid >
-    <ion-row>
-      <ion-col center text-center>
-        <button ion-button full color="success" >Sign up</button>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col center text-center>
-        <button ion-button full color="lightText">Log in</button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Page
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page1">
+  <h2 id="page-heading1" style="color:#000000;font-weight:300;font-style:italic;">
+    Login
+  </h2>
+  <form id="page-form4">
+    <ion-item id="page-input3">
+      <ion-label floating>
+        User ID
+      </ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item id="page-input4">
+      <ion-label floating>
+        Password
+      </ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  </form>
+  <button id="page-button1" ion-button color="royal" block style="border-radius:44px 44px 44px 44px;">
+    Login
+  </button>
 </ion-content>
