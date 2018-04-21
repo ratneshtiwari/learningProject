@@ -85,4 +85,5 @@
     <plugin name="cordova-plugin-appavailability" spec="^0.4.2" />
     <engine name="android" spec="~6.2.3" />
     <allow-navigation href="http://192.168.1.12:8100" />
+    <plugin name="cordova-plugin-secure-storage" spec="^2.6.8" />
 </widget>

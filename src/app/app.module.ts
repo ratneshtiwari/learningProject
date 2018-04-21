@@ -18,6 +18,13 @@ import { AppAvailability } from '@ionic-native/app-availability';
 import { NavController } from 'ionic-angular';
 import { TouchProvider } from '../providers/touch';
 import { UtilityService } from '../providers/utility';
+import { AuthService } from '../providers/auth';
+
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { firebaseConfig } from '../config';
+import { SecureStorage, SecureStorageObject } from '@ionic-native/secure-storage';
 
 
 @NgModule({
@@ -33,6 +40,7 @@ import { UtilityService } from '../providers/utility';
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(firebaseConfig.fire),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -54,6 +62,9 @@ import { UtilityService } from '../providers/utility';
     AppAvailability,
     TouchProvider,
     UtilityService,
+    AngularFireAuth,
+    AuthService,
+    SecureStorage
     
   ]
 })
